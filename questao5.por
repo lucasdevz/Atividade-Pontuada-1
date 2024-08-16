@@ -5,8 +5,8 @@ programa {
   inteiro a=0, b=0
   real resultado
 
-  // Leitura do cÛdigo de operaÁ„o
-    escreva("Digite a operaÁ„o (+, -, * ou /): ")
+  // Leitura do c√≥digo de opera√ß√£o
+    escreva("Digite a opera√ß√£o (+, -, * ou /): ")
     leia(operacao)
 
 // Leitura dos dois valores inteiros
@@ -26,13 +26,13 @@ programa {
     senao se (operacao == '/')
 
     se (b == 0)
-            escreva("Divis„o por zero n„o È permitida.")
+            escreva("Divis√£o por zero n√£o √© permitida.")
         senao
-            (resultado <- a / b)
+            (resultado == a / b)
     senao
-        escreva("OperaÁ„o inv·lida.")
+        escreva("Opera√ß√£o inv√°lida.")
 
-    // SaÌda
+    // Sa√≠da
     escreva("Resultado: ", resultado)
 
 
