@@ -1,26 +1,23 @@
 programa {
   funcao inicio() {
-
-    caracter cor
-    real preco
-
-    escreva("Informe a cor do CD (verde, azul, amarelo ou vermelho): ")
-    leia(cor)
-
-    se (cor == "verde") preco <- 15.00
-    senao se (cor == "azul") preco <- 20.00
-    senao se (cor == "amarelo")
-        preco <- 30.00
-    senao se (cor == "vermelho")
-        preco <- 40.00
-    senao
-        escreva("Cor inv·lida. As cores disponÌveis s„o: verde, azul, amarelo ou vermelho.")
-
-        se (preco > 0) 
-        escreva("O preÁo do CD ", cor, " È R$", preco, "\n")
-
-
-
-
+  //Variaveis
+  cadeia cor
+  inteiro vermelho,verde,amarelo,azul
+ 
+  verde=10
+  azul=20
+  amarelo=30
+  vermelho=40
+ 
+  // Entrada
+  escreva("Digite a cor CD:")
+  leia(cor)
+  se(cor=="vermelho"){escreva("O valor nescessario √© de 40 reais!")}
+  se(cor=="amarelo"){escreva("O valor nescessario √© de 30 reais!")}
+  se(cor=="azul"){escreva("O valor nescessario √© de 20 reais!")}
+  se(cor=="verde"){escreva("O valor nescessario √© de 10 reais!")}
+  se (cor!="verde" e cor!="vermelho" e cor!="azul" e cor!="amarelo"){escreva ("A cor que foi digitada n√£o est√° no historico!!!")}
+ 
+  //Saida
   }
 }
