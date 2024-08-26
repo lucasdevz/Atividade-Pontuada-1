@@ -1,42 +1,44 @@
 programa {
   funcao inicio() {
-
-    real quantidade=0, precoUnitario=0, total=0, desconto=0, totalPagar=0
-    caracter produto
-
-    // Entrada de dados
-
-    escreva("Digite a descrição do produto: ")
-    leia(produto)
-
-    escreva("Digite a quantidade adquirida: ")
-    leia(quantidade)
-
-    escreva("Digite o preço unitário do produto: ")
-    leia(precoUnitario)
-
-
-    // Cálculo do total da compra
-    total <- quantidade * precoUnitario
-
-    // Cálculo do desconto
-    se (quantidade <= 5) {desconto <- total * 0.02}
-    senao se (quantidade <= 10)
-        desconto <- total * 0.03
-        senao
-        desconto <- total * 0.05
-    totalPagar <- total - desconto
-
-    escreva("Produto: ", produto, "\n")
-    escreva("Quantidade: ", quantidade,"\n")
-    escreva("Preço unitário: R$", precoUnitario, "\n")
-    escreva("Total da compra: R$", total, "\n")
-    escreva("Desconto: R$", desconto, "\n")
-    escreva("Total a pagar: R$", totalPagar, "\n")
-
-
-
-
+  //Variaveis
+  cadeia nome
+  inteiro quantidade_adquirida
+  real preco_unitario,preco,total,total_a_pagar,desconto1,desconto2,desconto3
+ 
+  //Entrada
+  escreva("Qual o nome do produto:")
+  leia(nome)
+  escreva("O preÃ§o total de todos os produtos:")
+  leia(preco)
+  escreva("Digite a quantidade adquirida:")
+  leia(quantidade_adquirida)
+ 
+ 
+  // Processamento
+  preco_unitario=preco/quantidade_adquirida
+  total=quantidade_adquirida*preco_unitario
+  desconto1=0.02
+  desconto2=0.03
+  desconto3=0.05
+  se (quantidade_adquirida<=5){desconto1=0.02
+  total_a_pagar=total-desconto1 escreva("VocÃª recebeu um desconto de 2%!")
+ 
+  }
+   se (quantidade_adquirida>5 e quantidade_adquirida<=10){desconto2=0.03
+  total_a_pagar=total-desconto2 escreva("VocÃª recebeu um desconto de 3%!")
+ 
+  }
+   se (quantidade_adquirida>10){desconto1=0.05
+  total_a_pagar=total-desconto3 escreva("VocÃª recebeu um desconto de 5%!")
+ 
+  }
+ 
+ 
+  // Saida
+  escreva("\nPreÃ§o por unidade:" +preco_unitario)
+  escreva("\nPreÃ§o:" +preco)
+  escreva("\nTotal a ser pago:" +total_a_pagar)
+ 
     
   }
 }
