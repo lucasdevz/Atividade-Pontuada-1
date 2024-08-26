@@ -1,31 +1,24 @@
 programa {
   funcao inicio() {
+  //variaveis
+  real nota_1,nota_2,soma,media
+ 
+  // Entrada
+  escreva("Digite sua primeira nota:")
+  leia(nota_1)
+  escreva("Digite sua segunda nota:")
+  leia(nota_2)
+ 
+  // Processamento
 
-    real nota1, nota2, media
-
-    // Entrada de dados
-
-    escreva("Digite a primeira nota: ")
-    leia(nota1)
-
-    escreva("Digite a segunda nota: ")
-    leia(nota2)
-
-
-    // Cálculo da média
-    media (nota1 + nota2) / 2
-
-    escreva ("A média do aluno é: ", media)
-
-    se (media >= 6.0)
-        escreva("Parabéns! O aluno está aprovado.")
-
-    senao se (media >= 4.0)
-        escreva("O aluno está em recuperação.")
-    senao
-        escreva("O aluno está reprovado.")
-
+  soma=nota_1+nota_2
+  media=soma/2
+  // Saida
   
-    
+  escreva("\nPrimeira nota:" +nota_1)
+  escreva("\nSegunda nota:" +nota_2)
+  escreva("\nMedia do aluno:" +media)
+  se (media>=6){escreva("\nO aluno foi aprovado!")}
+   senao{escreva("\nO aluno foi reprovado!")}
   }
 }
